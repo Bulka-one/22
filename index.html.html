@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звук стонов</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Нажмите на экран, чтобы услышать звук!</h1>
+<audio id="moanSound" src="Napylniik - 2 лимузина.mp3"></audio>
+
+<script>
+    document.body.addEventListener('click', function() {
+        var sound = document.getElementById('moanSound');
+        sound.play().catch(function(error) {
+            console.log("Не удалось воспроизвести звук:", error);
+        });
+    });
+</script>
+
+</body>
+</html>
